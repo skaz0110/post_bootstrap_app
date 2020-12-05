@@ -17,12 +17,15 @@ class PostsController < ApplicationController
   end
 
   def edit
-  end
+  end 
 
   def update
   end
 
   def destroy
+    post = Post.find(params[:id])
+    post.destroy!
+    redirect_to root_path
   end
 
   private
